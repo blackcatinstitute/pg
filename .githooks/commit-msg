@@ -22,12 +22,16 @@
 #	echo >&2 Duplicate Signed-off-by lines.
 #	exit 1
 #}
-cat "$1"
+
+echo "HELLLOOOOO"
+
+exit 0
 
 test "" = "$(egrep -i "CSOBSK-|Merge branch" "$1")" && {
-  echo
+	echo
 	echo "Commit not performed, no CSOBSK task id specified in commit message."
 	echo "Please use commit message in format 'CSOBSK-1234: text'."
 	echo
 	exit 1
 } 
+exit 0
